@@ -1,6 +1,6 @@
-export default function MainPage(){
+export default function DailyQuest(){
   return (
-    <div className="mainPage">
+    <div className="dailyQuestContainer">
       <p>im the box that should containe some todos !!</p>
     </div>
   )

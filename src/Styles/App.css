@@ -8,9 +8,10 @@
   border: 1px solid gold;
 }
 
-.mainPage{
+.dailyQuestContainer, .scheduleConatiner, .todoContainer{
   border: 1px solid fuchsia;
 }
+
 
 .navBar{
   border: 1px solid red;

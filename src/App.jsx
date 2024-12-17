@@ -2,7 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import NavBar from './Component/NavBar';
-import MainPage from './Component/MainPage'
+import DailyQuest from './Component/DailyQuest';
+import Todo from './Component/Todo';
+import Schedule from './Component/Schedule'; 
+
 import Header from './Component/Header';
 import ErrorPage from './Component/ErrorPage';
 
@@ -15,7 +18,10 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path='/' Component={MainPage} />
+        <Route path='/' Component={DailyQuest} />
+        <Route path='/dailyQuest' Component={DailyQuest} />
+        <Route path='/todo' Component={Todo} />
+        <Route path='/schedule' Component={Schedule} />
         <Route path='*' Component={ErrorPage}/>
       </Routes>
       <NavBar />
