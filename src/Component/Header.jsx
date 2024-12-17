@@ -8,7 +8,7 @@ export default function Header() {
         <img src={userImage} alt='user name' />
         <div className='userName'>
           <div>
-            <b>Hello, </b>Ahmed Miled
+            <b>Hello, </b>Ahmed 
           </div>
           <div className='date'>24-12-2024</div>
         </div>

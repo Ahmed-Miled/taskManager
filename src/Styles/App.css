@@ -19,7 +19,7 @@
 .todoContainer {
   border: 1px solid fuchsia;
 }
-.dailyQuest {
+.todoContainer  {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -27,7 +27,7 @@
   justify-content: space-between;
 }
 
-.dailyQuest > :nth-child(1) {
+.todoContainer  > :nth-child(1) {
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -42,6 +42,7 @@
 }
 .task:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 .btns {
   display: flex;
