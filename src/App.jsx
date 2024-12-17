@@ -5,6 +5,7 @@ import NavBar from './Component/NavBar';
 import DailyQuest from './Component/DailyQuest';
 import Todo from './Component/Todo';
 import Schedule from './Component/Schedule'; 
+import Game from './Component/Game';
 
 import Header from './Component/Header';
 import ErrorPage from './Component/ErrorPage';
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/dailyQuest' Component={DailyQuest} />
         <Route path='/todo' Component={Todo} />
         <Route path='/schedule' Component={Schedule} />
+        <Route path='/game' Component={Game} />
         <Route path='*' Component={ErrorPage}/>
       </Routes>
       <NavBar />
