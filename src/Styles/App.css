@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header{
+  border: 1px solid gold;
+}
+
+.mainPage{
+  border: 1px solid fuchsia;
+}
+
+.navBar{
+  border: 1px solid red;
+}
