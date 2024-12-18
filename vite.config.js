@@ -5,10 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/taskManager/', // Replace <repo-name> with your repository name
-  build: {
-    rollupOptions: {
-      input: '/index.html',
-    }
-  }
 })
 
