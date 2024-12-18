@@ -1,0 +1,38 @@
+/* ProgressBar container */
+.progressBarContainer {
+  /*
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  */
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Label next to the progress bar */
+.label {
+  font-weight: 100;
+  font-size: x-small;
+  text-align: left;
+}
+
+/* Bar background */
+.barBackground {
+  width: 100%; /* Make sure the background spans the container width */
+  height: 10px;
+  background-color: #ddd; /* Light gray background for the bar */
+  border-radius: 10px; /* Optional: round the corners */
+  overflow: hidden; /* Ensures no overflow of the bar */
+}
+
+/* Filled part of the bar */
+.barFill {
+  height: 100%; /* Ensures the fill takes up the full height of the background */
+  transition: width 0.3s ease-in-out; /* Optional: smooth transition when width changes */
+}
+
+/* Percentage text */
+.percentage {
+  font-size: x-small;
+  font-weight: 100;
+}

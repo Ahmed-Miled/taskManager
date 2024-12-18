@@ -1,0 +1,77 @@
+/* Game Board Container */
+.gameBoard {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* First column is smaller, second is larger */
+  grid-template-rows: 1fr 1fr 1fr; /* Two rows for the first column */
+  gap: 20px; /* Space between grid items */
+  padding: 10px;
+  height: 53ch; /* Full page height */
+  background-color: #ac1717;
+  font-family: 'Arial', sans-serif;
+  position: relative; /* For positioning the buy button */
+}
+
+/* Player Section */
+.player {
+  grid-row: 1 / 2; /* Occupies the first row */
+  grid-column: 1 / 2; /*corrected*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #514242;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Level, Health, and Coins Section */
+.status {
+  grid-row: 1 / 2; /* Occupies the second row */
+  grid-column: 2 / 3; /*corected*/
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.status > div {
+  background-color: #117894;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Inventory Section */
+.inventory {
+  grid-row: 2 / 4; /* Occupies both rows in the second column */
+  grid-column: 1 / 3; /*both corrected*/
+  background-color: #93ac19;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Buy Button Positioned in Bottom-Right Corner */
+.store {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.store button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.store button:hover {
+  background-color: #218838;
+}
