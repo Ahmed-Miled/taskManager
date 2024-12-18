@@ -1,38 +1,33 @@
-/* ProgressBar container */
-.progressBarContainer {
-  /*
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  */
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-/* Label next to the progress bar */
 .label {
-  font-weight: 100;
-  font-size: x-small;
   text-align: left;
+  color: black;
 }
 
-/* Bar background */
 .barBackground {
-  width: 100%; /* Make sure the background spans the container width */
-  height: 10px;
-  background-color: #ddd; /* Light gray background for the bar */
-  border-radius: 10px; /* Optional: round the corners */
-  overflow: hidden; /* Ensures no overflow of the bar */
+  width: 100%; 
+  height: 20px; 
+  background-color: #ece9e9; 
+  border-radius: 10px;
+  position: relative; 
+  overflow: hidden; 
 }
 
-/* Filled part of the bar */
 .barFill {
-  height: 100%; /* Ensures the fill takes up the full height of the background */
-  transition: width 0.3s ease-in-out; /* Optional: smooth transition when width changes */
+  height: 100%; 
+  transition: width 0.3s ease-in-out;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  border-radius: 10px;
 }
 
-/* Percentage text */
 .percentage {
-  font-size: x-small;
-  font-weight: 100;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: small;
+  font-weight: bold;
+  color: rgb(0, 0, 0); 
+  pointer-events: none;
 }

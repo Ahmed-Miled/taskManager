@@ -1,0 +1,34 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+}
+
+.itemImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px; /* Optional: rounded corners */
+  border: 2px solid #ddd;
+}
+
+.itemLabel {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.itemsContainer {
+  grid-row: 2 / 4; /* Occupies both rows in the second column */
+  grid-column: 1 / 3; /* Spans across two columns */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Auto-fit items with a minimum width */
+  gap: 15px; /* Space between grid items */
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}

@@ -1,18 +1,17 @@
-import { useState } from 'react';
-import AddTask from '../Component/AddTask';
+import { useState } from "react";
+import "../Styles/Todo.css"; 
 
 export default function Todo() {
-  const [showBlock, setShowBlock] = useState(false);
   const [todos, setTodos] = useState([
-    { id: 1, title: 'Learn React', completed: false },
-    { id: 2, title: 'Build Todo App', completed: false },
-    { id: 3, title: 'Master React Router', completed: true },
+    { id: 1, title: "Task A", completed: false },
+    { id: 2, title: "Task B", completed: false },
+    { id: 3, title: "Task C", completed: true },
   ]);
+
   const deleteTask = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  // Toggle task completion
   const toggleCompletion = (id) => {
     setTodos(
       todos.map((todo) =>
@@ -20,50 +19,36 @@ export default function Todo() {
       )
     );
   };
-/*
-  let blockContent = null;
-  if (showBlock) {
-    blockContent = (
-      <>
-        <div
-          onClick={handleClick}
-          className={`add ${isHidden ? 'hidden' : ''}`}
-        >
-          Add {props.text}
-        </div>
-        <div className='form'>{formContent}</div>
-      </>
-    );
-}
-*/
-  return (
-    <>
-      <div className='todoContainer'>
-        <div >
-          {todos.map((todo) => (
-            <div className='task'>
-              <div
-                className='description'
-                style={{
-                  textDecoration: todo.completed ? 'line-through' : 'none',
-                }}
-              >
-                {' '}
-                {todo.title}{' '}
-              </div>
 
-              <div className='btns'>
-                <button onClick={() => deleteTask(todo.id)}>Delete</button>
-                <button><a href="/edit">Edit</a> </button>
-                <button onClick={() => toggleCompletion(todo.id)}>
-                  {todo.completed ? 'Undo' : 'Done'}
-                </button>
-              </div>
+  return (
+    <div className="todoContainer">
+      <ul className="taskList">
+        {todos.map((todo) => (
+          <li key={todo.id} className="taskItem">
+            <div
+              className="taskTitle"
+              style={{
+                textDecoration: todo.completed ? "line-through" : "none",
+              }}
+            >
+              {todo.title}
             </div>
-          ))}
-        </div>
-        <AddTask />
-      </div>
-    </>
+            <div className="taskActions">
+              <button onClick={() => deleteTask(todo.id)}>Delete</button>
+              <button>
+                <a href="/edit">Edit</a>
+              </button>
+              <button onClick={() => toggleCompletion(todo.id)}>
+                {todo.completed ? "Undo" : "Done"}
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <button className="addTaskButton" onClick={() => console.log("Add Task!")}>
+        Add Task
+      </button>
+
+    </div>
   );
 }

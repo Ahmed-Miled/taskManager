@@ -1,7 +1,7 @@
 export default function DailyQuest() {
   return (
     <div className='dailyQuest container'>
-      <p>im daily quests</p>
+      <p style={{ color: 'black' }}>mch aref chnwa n7ot lenna !!</p>
     </div>
   );
 }

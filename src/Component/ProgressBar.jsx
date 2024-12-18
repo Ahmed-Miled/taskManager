@@ -15,8 +15,8 @@ const ProgressBar = ({ label, percentage, color }) => {
             backgroundColor: color,
           }}
         ></div>
-      </div>
       <div className="percentage">{percentage}%</div>
+      </div>
     </div>
   );
 };

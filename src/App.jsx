@@ -11,8 +11,6 @@ import Header from './Component/Header';
 import ErrorPage from './Component/ErrorPage';
 
 
-import './Styles/App.css';
-
 const App = () => {
   return (
     <React.StrictMode>

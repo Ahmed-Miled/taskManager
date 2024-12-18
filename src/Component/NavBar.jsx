@@ -1,42 +1,61 @@
+/*
 import home from '../assets/home.png';
 import game from '../assets/game.png';
 import calendrier from '../assets/calendrier.png';
 import todo from '../assets/todo.png';
+import '../Styles/NavBar.css';
+
 export default function NavBar() {
   return (
-    <div className='navBar'>
-      <div className='dailyBox'>
-        <a href='/'>
-          <div className='box'>
-            <img src={home} alt='home' />
-            <div>Home</div>
-          </div>
-        </a>
-      </div>
-      <div className='todoBox'>
-        <a href='/todo'>
-          <div className='box'>
-            <img src={todo} alt='todo' />
-            <div>To do</div>
-          </div>
-        </a>
-      </div>
-      <div className='schedule'>
-        <a href='/schedule'>
-          <div className='box'>
-            <img src={calendrier} alt='calendrier' />
-            <div>schedule</div>
-          </div>
-        </a>
-      </div>
-      <div className='game'>
-        <a href='/game'>
-          <div className='box'>
-            <img src={game} alt='Game ' />
-            <div>Game</div>
-          </div>
-        </a>
-      </div>
-    </div>
+    <nav className="navBar">
+      <a href="/" className="navItem">
+        <img src={home} alt="Home" />
+        <span>Home</span>
+      </a>
+      <a href="/todo" className="navItem">
+        <img src={todo} alt="To Do" />
+        <span>To Do</span>
+      </a>
+      <a href="/schedule" className="navItem">
+        <img src={calendrier} alt="Schedule" />
+        <span>Schedule</span>
+      </a>
+      <a href="/game" className="navItem">
+        <img src={game} alt="Game" />
+        <span>Game</span>
+      </a>
+    </nav>
+  );
+}
+*/
+import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import home from '../assets/home.png';
+import game from '../assets/game.png';
+import calendrier from '../assets/calendrier.png';
+import todo from '../assets/todo.png';
+import '../Styles/NavBar.css';
+
+export default function NavBar() {
+  const location = useLocation(); // Get the current location
+
+  return (
+    <nav className="navBar">
+      <Link to="/" className={`navItem ${location.pathname === '/' ? 'active' : ''}`}>
+        <img src={home} alt="Home" />
+        <span>Home</span>
+      </Link>
+      <Link to="/todo" className={`navItem ${location.pathname === '/todo' ? 'active' : ''}`}>
+        <img src={todo} alt="To Do" />
+        <span>To Do</span>
+      </Link>
+      <Link to="/schedule" className={`navItem ${location.pathname === '/schedule' ? 'active' : ''}`}>
+        <img src={calendrier} alt="Schedule" />
+        <span>Schedule</span>
+      </Link>
+      <Link to="/game" className={`navItem ${location.pathname === '/game' ? 'active' : ''}`}>
+        <img src={game} alt="Game" />
+        <span>Game</span>
+      </Link>
+    </nav>
   );
 }
