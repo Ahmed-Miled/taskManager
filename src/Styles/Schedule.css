@@ -45,3 +45,54 @@ select {
 }
 
 
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .calendrier {
+    padding: 18px;
+  }
+
+  .taskItem {
+    flex-direction: row;
+    padding: 12px;
+    margin: 10px 0;
+  }
+
+  .taskName {
+    font-size: 1.2rem;
+  }
+
+  .taskDate,
+  .taskPriority {
+    font-size: 0.95em;
+  }
+
+  select {
+    font-size: 1rem;
+    padding: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .calendrier {
+    padding: 25px;
+  }
+
+  .taskItem {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .taskName {
+    font-size: 1.3rem;
+  }
+
+  .taskDate,
+  .taskPriority {
+    font-size: 1em;
+  }
+
+  select {
+    font-size: 1.1rem;
+    padding: 7px;
+  }
+}

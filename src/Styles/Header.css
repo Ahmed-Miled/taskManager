@@ -43,3 +43,10 @@
   font-size: 0.9rem;
   color: #888;
 }
+
+
+@media (min-width: 769px) {
+  .header{
+    justify-content: space-around;
+  }
+}

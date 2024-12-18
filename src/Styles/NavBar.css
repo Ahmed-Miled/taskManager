@@ -1,51 +1,4 @@
-/*.navBar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #f5f5f5;
-  padding: 10px 0;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-  border-top: 2px solid #ddd;
-  z-index: 100; 
-}
 
-.navItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  font-size: 0.9rem;
-  transition: transform 0.2s, color 0.2s;
-}
-
-.navItem img {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 5px;
-}
-
-.navItem:hover {
-  transform: scale(1.1);
-  color: #007bff; 
-}
-
-.navItem span {
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.navBar .navItem:nth-child(odd) span {
-  font-weight: 600;
-}
-
-.navBar .navItem span:hover {
-  font-weight: 800;
-}
-*/
 .navBar {
   display: flex;
   justify-content: space-around;
@@ -78,7 +31,7 @@
 
 .navItem:hover {
   transform: scale(1.1);
-  color: #007bff; /* Highlight color on hover */
+  color: #007bff;
 }
 
 .navItem span {
@@ -94,7 +47,6 @@
   font-weight: 800;
 }
 
-/* Add the active class */
 .navItem.active {
   background-color: #007bff;
   color: white;
@@ -103,5 +55,76 @@
 }
 
 .navItem.active img {
-  filter: invert(1); /* Optional: Invert the color of the icon when active */
+  filter: invert(1); 
+}
+
+
+@media (max-width: 600px) {
+  .navBar {
+    padding: 8px 0;
+    justify-content: space-evenly;
+  }
+
+  .navItem {
+    font-size: 0.8rem;
+  }
+
+  .navItem img {
+    width: 25px; 
+    height: 25px;
+  }
+
+  .navItem span {
+    font-size: 0.7rem; 
+  }
+
+  .navItem.active {
+    padding: 8px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .navBar {
+    padding: 10px 0;
+  }
+
+  .navItem {
+    font-size: 1rem;
+  }
+
+  .navItem img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navItem span {
+    font-size: 0.85rem;
+  }
+
+  .navItem.active {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navBar {
+    padding: 12px 0;
+  }
+
+  .navItem {
+    font-size: 1.1rem; 
+  }
+
+  .navItem img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .navItem span {
+    font-size: 0.9rem; 
+  }
+
+  .navItem.active {
+    padding: 12px;
+  }
 }
