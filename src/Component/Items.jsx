@@ -2,8 +2,6 @@ import React from 'react';
 import Item from './Item';
 import question from '../assets/question.png';
 
-//import '../Styles/Items.css';
-
 const Items = () => {
   const inventoryItems = [
     { imgSrc: {question}, label: 'item 1' },

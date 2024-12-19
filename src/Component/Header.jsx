@@ -1,9 +1,8 @@
 
 import userImage from '../assets/user.png';
-import '../Styles/Header.css'; // Add a dedicated CSS file for styling
+import '../Styles/Header.css'; 
 
 export default function Header() {
-  const currentDate = new Date().toLocaleDateString(); // Dynamically fetch the current date
 
   return (
     <header className="header">
@@ -14,7 +13,7 @@ export default function Header() {
           <div className="greeting">
             <b>Hello,</b> Ahmed
           </div>
-          <div className="date">{currentDate}</div>
+          <div className="date email">fake@gmail.com</div>
         </div>
       </div>
     </header>

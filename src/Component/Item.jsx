@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 const Item = ({ imgSrc, label }) => {
   return (
     <div className="item">
@@ -12,8 +11,8 @@ const Item = ({ imgSrc, label }) => {
 };
 
 Item.propTypes = {
-  imgSrc: PropTypes.string.isRequired, // URL or path to the image
-  label: PropTypes.string.isRequired, // Text for the item
+  imgSrc: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
 };
 
 export default Item;

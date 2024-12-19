@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../Styles/ProgressBar.css';
@@ -15,16 +14,18 @@ const ProgressBar = ({ label, percentage, color }) => {
             backgroundColor: color,
           }}
         ></div>
-      <div className="percentage">{percentage}%</div>
+        <div className="percentage">
+          {color === "gold" ? `${percentage}K / 100K` : `${percentage}%`}
+        </div>
       </div>
     </div>
   );
 };
 
 ProgressBar.propTypes = {
-  label: PropTypes.string.isRequired, // Text next to the bar
-  percentage: PropTypes.number.isRequired, // Fill percentage (0-100)
-  color: PropTypes.string.isRequired, // Color of the bar
+  label: PropTypes.string.isRequired, 
+  percentage: PropTypes.number.isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default ProgressBar;

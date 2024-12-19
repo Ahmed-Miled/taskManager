@@ -1,34 +1,4 @@
-/*
-import home from '../assets/home.png';
-import game from '../assets/game.png';
-import calendrier from '../assets/calendrier.png';
-import todo from '../assets/todo.png';
-import '../Styles/NavBar.css';
-
-export default function NavBar() {
-  return (
-    <nav className="navBar">
-      <a href="/" className="navItem">
-        <img src={home} alt="Home" />
-        <span>Home</span>
-      </a>
-      <a href="/todo" className="navItem">
-        <img src={todo} alt="To Do" />
-        <span>To Do</span>
-      </a>
-      <a href="/schedule" className="navItem">
-        <img src={calendrier} alt="Schedule" />
-        <span>Schedule</span>
-      </a>
-      <a href="/game" className="navItem">
-        <img src={game} alt="Game" />
-        <span>Game</span>
-      </a>
-    </nav>
-  );
-}
-*/
-import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import { Link, useLocation } from 'react-router-dom'; 
 import home from '../assets/home.png';
 import game from '../assets/game.png';
 import calendrier from '../assets/calendrier.png';
