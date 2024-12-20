@@ -32,7 +32,8 @@ export default function Home() {
     },
   ]);
 
-  const currentDate = new Date().toISOString().split('T')[0];
+  // const currentDate = new Date().toISOString().split('T')[0];
+  const currentDate = "2024-12-19";
 
   const todayTasks = tasks.filter((task) => task.date === currentDate);
 
